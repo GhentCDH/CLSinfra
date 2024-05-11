@@ -17,15 +17,16 @@ We theorize that **aspect-based sentiment analysis** as a technique may be more 
 Below we list the notebooks we created for 1) **annotation and data preparation**, 2) **aspect and/or entity extraction** and 3) **aspect-based sentiment analysis**.
 
 ## Annotation and data preparation
-*	**Annotation guidelines on travelogues (example)**
-This document shows you the annotation guidelines which were developed to label a corpus of travelogues in German, Dutch, French and English for aspect-based sentiment analysis. 
-*	**Annotations for ABSA on travelogues (example)**
+###	**Annotation guidelines on travelogues (example)**
+This document shows you the annotation guidelines which were developed to label a corpus of travelogues in German, Dutch, French and English for aspect-based sentiment analysis. It also includes a small guide on the open-source annotation platform [INCEPTION](https://inception-project.github.io/), which we at GhentCDH used for our projects.
+###	**Annotations for ABSA on travelogues (example)**
 This folder includes the annotations made for aspect-based sentiment analysis on our multilingual corpus of travelogues. They can be freely reused and adapted.
-*	**Bootstrapping_inception**
+###	**Bootstrapping_inception**
 This notebook shows you how to bootstrap your corpus. It uses spaCy’s off-the-shelf NER tool, and shows you how to integrate the results in XMI XML. This is the input format of the annotation platform Inception, and allows you to post-correct entities instead of annotating your texts from scratch. This notebook can be adapted with other tools to bootstrap data for Inception.
-*	**Annotations_to_IOB**
-This language-agnostic notebook shows you how to transform your annotations to an IOB-format. It takes the sentence/chunk and the entity text column as an input, and adds a new column to your DataFrame with the IOB-annotations in a list. We do this to be able to apply span evaluation and calculate F1-scores. 
+###	**Annotations_to_IOB**
+This language-agnostic notebook shows you how to transform your annotations to an IOB-format. It takes the sentence/chunk and the entity text column as an input, and adds a new column to your DataFrame with the IOB-annotations in a list. We do this to be able to apply span evaluation and calculate F1-scores.
 
+![dataframe_to_bio](https://github.com/GhentCDH/CLSinfra/blob/main/Dataframe_to_bio.png)
  
 You can evaluate your data with an evaluation package of your choice – but we used [Nervaluate](https://pypi.org/project/nervaluate/)!
 
@@ -64,5 +65,11 @@ This notebook shows you an example of a rule-based ABSA-pipeline built for Engli
 2)	Opinion word identification using spaCy’s POS-tagger to extract adjectives, adverbs and auxiliary constructions.
 3)	Sentiment analysis based on the extracted opinion words using the SenticNet package. In the case of negated sentiment words, NLTK’s synset module was used to fetch the word’s antonym and generate a score.
 
+## Other interesting sources to check! 🦾❗
+
+Looking for other ways to apply NER and/or aspect recognition on your corpus? Make sure to check out these incredibly interesting sources for Digital Humanists to experiment with!
+* [LitBank](https://github.com/dbamman/litbank)
+* [Python Programming for DH (YouTube)](https://www.youtube.com/@python-programming)
+* [Gollie](https://hitz-zentroa.github.io/GoLLIE/): open-source Large Language Model trained to follow annotation guidelines.
 
 
