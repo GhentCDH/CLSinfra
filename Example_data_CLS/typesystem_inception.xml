@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+        
+    <types>
+                
+        <typeDescription>
+                        
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.morph.MorphologicalFeatures</name>
+                        
+            <description>Morphological categories that can be attached to tokens.
+
+The features are supposed to match the Universal Dependency v1 features.</description>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>gender</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>number</name>
+                                        
+                    <description>Singular/plural</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>case</name>
+                                        
+                    <description>Nouns: nominative, genetiv, dative, ...</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>degree</name>
+                                        
+                    <description>Adjectives: comparative/Superlative</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>verbForm</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>tense</name>
+                                        
+                    <description>Verbs: past tense, present tense, future tense, etc.</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>mood</name>
+                                        
+                    <description>Verbs: indicative, imperative, subjunctive</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>voice</name>
+                                        
+                    <description>Verbs: active/passive</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>definiteness</name>
+                                        
+                    <description>Definite or indefinite</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>value</name>
+                                        
+                    <description>The original morphological analysis results as produced by a tool or as recorded in a corpus (if available). If the categories were originally encoded in such a string, the other features are filled by analyzing this string. If the categories were provided separately, e.g. by different attributed in an XML-encoded corpus, this field may remain empty.</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>person</name>
+                                        
+                    <description>Verbs: 1st, 2nd, 3rd person</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>aspect</name>
+                                        
+                    <description>Verbs: perfective, imperfective</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>animacy</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>negative</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>numType</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>possessive</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>pronType</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>reflex</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>transitivity</name>
+                                        
+                    <description>Verbs: transitive/intransitive
+
+@deprecated</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</name>
+                        
+            <description>The part of speech of a word or a phrase.</description>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>PosValue</name>
+                                        
+                    <description>Fine-grained POS tag. This is the tag as produced by a POS tagger or obtained from a reader.</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>coarseValue</name>
+                                        
+                    <description>Coarse-grained POS tag. This may be produced by a POS tagger or reader in addition to the fine-grained tag.</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma</name>
+                        
+            <description/>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>value</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence</name>
+                        
+            <description/>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>id</name>
+                                        
+                    <description>If this unit had an ID in the source format from which it was imported, it may be stored here. IDs are typically not assigned by DKPro Core components. If an ID is present, it should be respected by writers.</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Stem</name>
+                        
+            <description/>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>value</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</name>
+                        
+            <description>&lt;p&gt;Token is one of the two types commonly produced by a segmenter (the other being Sentence). A Token usually represents a word, although it may be used to represent multiple tightly connected words (e.g. "New York") or parts of a word (e.g. the possessive "'s"). One may choose to split compound words into multiple tokens, e.g. ("CamelCase" -&amp;gt; "Camel", "Case"; "Zauberstab" -&amp;gt; "Zauber", "stab"). Most processing components operate on Tokens, usually within the limits of the surrounding Sentence. E.g. a part-of-speech tagger analyses each Token in a Sentence and assigns a part-of-speech to each Token.&lt;/p&gt;</description>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>parent</name>
+                                        
+                    <description>the parent of this token. This feature is meant to be used in when the token participates in a constituency parse and then refers to a constituent containing this token. The type of this feature is {@link Annotation} to avoid adding a dependency on the syntax API module.</description>
+                                        
+                    <rangeTypeName>uima.tcas.Annotation</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>lemma</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>stem</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Stem</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>pos</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>morph</name>
+                                        
+                    <description>The morphological feature associated with this token.</description>
+                                        
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.morph.MorphologicalFeatures</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>id</name>
+                                        
+                    <description>If this unit had an ID in the source format from which it was imported, it may be stored here. IDs are typically not assigned by DKPro Core components. If an ID is present, it should be respected by writers.</description>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>form</name>
+                                        
+                    <description>Potentially normalized form of the token text that should be used instead of the covered text if set.</description>
+                                        
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.TokenForm</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>syntacticFunction</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>order</name>
+                                        
+                    <description>Disambiguates the token order for tokens which have the same offsets, e.g. when the contraction "à" is analyzed as two tokens "a" and "a".</description>
+                                        
+                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.TokenForm</name>
+                        
+            <description>A alternative token text which should be used instead of the covered text if set on a token.</description>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>value</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>webanno.custom.NamedEntities</name>
+                        
+            <description/>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>Entities</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                                        
+                    <elementType>webanno.custom.NamedEntitiesEntitiesLink</elementType>
+                                        
+                    <multipleReferencesAllowed>false</multipleReferencesAllowed>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>value</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>webanno.custom.NamedEntitiesEntitiesLink</name>
+                        
+            <description/>
+                        
+            <supertypeName>uima.cas.TOP</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>role</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>target</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>webanno.custom.NamedEntities</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+            
+    </types>
+    
+</typeSystemDescription>
