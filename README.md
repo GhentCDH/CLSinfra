@@ -14,13 +14,13 @@ We theorize that **aspect-based sentiment analysis** as a technique may be more 
 
 ❗🧠 These Notebooks are not meant to reinvent the wheel. We simply want to build an infrastructure for scholars looking to perform NER or sentiment analysis on their corpus, and we do this by making step-wise code examples which can be freely used and adapted for your own purposes! 
 
-Below we list the notebooks we created for 1) **annotation and data preparation**, 2) **aspect and/or entity extraction** and 3) **aspect-based sentiment analysis**.
+🚀 Below we list the resources and Jupyter Notebooks we created for 1) **annotation and data preparation**, 2) **aspect and/or entity extraction** and 3) **aspect-based sentiment analysis**.
 
 ## Annotation and data preparation
-###	**Annotation guidelines on travelogues (example)**
+###	**annotation_guide_2024.pdf (example)**
 This document shows you the annotation guidelines which were developed to label a corpus of travelogues in German, Dutch, French and English for aspect-based sentiment analysis. It also includes a small guide on the open-source annotation platform [INCEPTION](https://inception-project.github.io/), which we at GhentCDH used for our projects.
 ###	**Annotations for ABSA on travelogues (example)**
-This folder includes the annotations made for aspect-based sentiment analysis on our multilingual corpus of travelogues. They can be freely reused and adapted.
+We include links to our Drive folder which hosts the annotations we made for **aspect-based sentiment analysis on our multilingual corpus of travelogues**. They can be freely reused and adapted, and are the use-case for the development of our workflows. For each notebook, we'll load a sample of our (annotated) data directly from our GitHub repository to showcase each workflow. 
 ###	**Bootstrapping_inception**
 This notebook shows you how to bootstrap your corpus. It uses spaCy’s off-the-shelf NER tool, and shows you how to integrate the results in XMI XML. This is the input format of the annotation platform Inception, and allows you to post-correct entities instead of annotating your texts from scratch. This notebook can be adapted with other tools to bootstrap data for Inception.
 ###	**Annotations_to_IOB**
@@ -64,6 +64,87 @@ This notebook shows you an example of a rule-based ABSA-pipeline built for Engli
 1)	Aspect extraction based on spaCy’s noun extraction module (aspects here are defined as nouns).
 2)	Opinion word identification using spaCy’s POS-tagger to extract adjectives, adverbs and auxiliary constructions.
 3)	Sentiment analysis based on the extracted opinion words using the SenticNet package. In the case of negated sentiment words, NLTK’s synset module was used to fetch the word’s antonym and generate a score.
+
+# Travelogues example data 🧭🗺
+
+This README details the **Metadata**, **Data**, **Annotations and annotation guide** used as an example use-case to run the notebooks! 
+
+## Metadata 
+
+The metadata for the entire corpus is split per collection, and can be downloaded via our [Drive folder](https://drive.google.com/drive/folders/17hqPMR-gi2fg1TbuBzBLrt-xcu-_1MO7?usp=sharing).
+
+* **Biodiversity Heritage Library** | BHL_merged.csv
+* **Travelogues Project** | TP_merged.csv
+* **Italian Travelogues** | IT_merged.csv
+* **Gutenberg Project** | GB_merged.csv
+* **DBNL** | DBNL_merged.csv
+
+Each .CSV-file contains the following columns:
+
+* ID (new ID for processing the data)
+* language (language the text is written in)
+* title (title of the book)
+* author (author of the book)
+* date_published (year the book was published)
+* Original_ID (original ID from the source. These are also the names of the text files in the gathered corpus.)
+* no_of_character (number of characters)
+* no_of_tokens (number of tokens as processed by SpaCy)
+* OCR_quality (quality of the OCR according to the [Garbageness Score](https://ryanfb.xyz/etc/2015/03/16/automatic_evaluation_of_ocr_quality.html).
+
+
+## Data (travelogues corpus)
+
+Texts gathered are named according to the Original_ID column.
+
+### **Biodiversity Heritage Library** 
+
+The [BHL corpus](https://drive.google.com/drive/folders/1cig-uR5W7YILuDiVZLTOUnS1mkG-utQE?usp=drive_link) is published on our Drive due to its size. 
+The dataset is split according to the key words used to scrape the texts (explor, journe, excurs, travel, expeditie, reis, trip). 
+The texts contain a multitude of languages (Dutch, English, French, German, Portuguese, Latin, ...). 
+The code used to scrape this data from the API is published in our **Notebooks** folder.
+
+### **Gutenberg Project Travelogues**
+
+The [Gutenberg corpus](https://drive.google.com/drive/folders/1HrFVVYageLbpl3tcDcajousWPVj-JnPx?usp=drive_link) is published on our Drive.
+The texts are in both English and French.
+
+### **DBNL dataset**
+
+The [DBNL](https://drive.google.com/drive/folders/1-1uY54VHEr1XEGDglm-42K_NLeA3ip3j?usp=drive_link) is published on our Drive.
+It contains all texts requested from the [DBNL website](https://www.dbnl.org/) that are related to travel. 
+The texts are all in Dutch.
+
+### **Italian Travels dataset**
+
+The Italian Travels dataset can be gathered from the [project "Today we Have Passed with the Ancients...": Visions of Italy between XIX and XX century ](https://sites.google.com/view/travelwritingsonitaly/home?authuser=0).
+Files are available in .TEI and .TXT.
+
+### **German Travelogues Project dataset**
+
+The German Travelogues Project dataset can be gathered from their [GitHub repository](https://github.com/travelogues/travelogues-corpus). More information on the corpus can be found on [their website](https://www.travelogues-project.info/).
+
+
+## Annotations
+
+We created an annotated dataset comprising texts in English, Dutch, German and French which were annotated for biodiversity-related aspects and their associated sentiment. 
+The [annotated dataset](https://drive.google.com/file/d/1ebv8IeBg4fmuEcVnKrp3GqhCy2-wLp3F/view?usp=sharing) is published on our Drive.
+The aspects annotated are further detailed in the **annotation_guide.PDF**. Sentiment-bearing words are annotated on a 1 (very negative) to 5 (very positive)-point scale. Sentiment was also annotated on the level of the sentence.
+The .ZIP-file **_Annotations.zip_** contains the annotated files in UIMA CAS XMI (XML 1.1), and can easily be parsed using the [Inceptalytics API](https://github.com/catalpa-cl/inceptalytics).
+
+The following aspects were considered: 
+
+* PERSON
+* LOCATION
+* ORGANISATION
+* FAUNA
+* FLORA
+* BIOME
+* HUMAN_LANDFORM
+* NATURAL_LANDFORM
+* NATURAL_PHENOMENON
+* WEATHER
+* MYTH
+
 
 ## Other interesting sources to check! 🦾❗
 
