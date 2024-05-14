@@ -33,6 +33,8 @@ You can evaluate your data with an evaluation package of your choice – but we 
 ## Labelling and evaluation (NER) 🔎🌎
 Our notebooks cater to scholars who want to perform aspect/named entity recognition in three scenarios: 1) you have no gold standard data available, 2) you have limited gold standard data available (only for evaluation) and 3) you have enough gold standard data available for training and evaluation. 
 All notebooks show you how to start from a plain text corpus, transform it into a Pandas DataFrame and output an entity/aspect column. Each notebook details the background knowledge you need to adapt the code, details the steps and talks about the limitations and advantages of each approach. Additionally, we point you to other interesting notable sources and packages to try!
+
+![overview_notebooks](https://github.com/GhentCDH/CLSinfra/blob/main/notebooks_overview.png)
 ###	**Aspect_spacy**
 Using our labeled travelogues data as a showcase, we show you the following functionalities of the [spaCy package](https://spacy.io/usage/training#config):
 1.	Generate off-the-shelf entities for your corpus using spaCy’s models (EN, FR, NL, GER).
