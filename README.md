@@ -2,7 +2,7 @@
 
 This repository hosts the work done in the framework of the [Computational Literary Studies Project (2020-2025)](https://clsinfra.io/). The CLS project is an infrastructure research projects which aims to create materials to support the digital humanities community by pointing them to the myriad of available tools and resources to collect, analyze and publish their literary-historical datasets. 
 
-We at the [Ghent Center for Digital Humanities](https://www.ghentcdh.ugent.be/) were responsible for building Natural Language Processing pipelines for the DH community for **Named Entity Recognition**, **sentiment analysis** and **relation extraction** purposes in English, Dutch, French and German. 
+We at the [Ghent Center for Digital Humanities](https://www.ghentcdh.ugent.be/) and the [Language and Translation Technology Team (LT3)](https://lt3.ugent.be/) were responsible for building Natural Language Processing pipelines for the DH community for **Named Entity Recognition**, **sentiment analysis** and **relation extraction** purposes in English, Dutch, French and German. 
 
 We decided to tackle this task by focusing our efforts on the development of aspect-based sentiment analysis workflows in two steps:
 1.	Named entity and/or aspect extraction*.
