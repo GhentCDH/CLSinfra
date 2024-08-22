@@ -20,7 +20,7 @@ The code for the prompting process can be found in the notebook **PROMPT_V.ipynb
 
 If you want to recreate our experiments, or are interested in the results we got:
 * [This is a link to our Drive Folder with the evaluation sets (dev) we used, and the outputs for each language, prompt and model: **Results_LLM**](https://drive.google.com/drive/folders/1JxqSYDTTHoeOGEXJnJQ4SH4adFzOhmPc?usp=sharing)
-* [This is a link to the presentations and posters made based on the results of our experiments: **Data_LLM.zip**.](https://drive.google.com/drive/folders/1JxqSYDTTHoeOGEXJnJQ4SH4adFzOhmPc?usp=sharing)
+* [This is a link to the papers, presentations and posters made based on the results of our experiments: **Data_LLM.zip**.](https://drive.google.com/drive/folders/1JxqSYDTTHoeOGEXJnJQ4SH4adFzOhmPc?usp=sharing)
 
 
 
