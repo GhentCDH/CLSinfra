@@ -1,4 +1,4 @@
-# NER and ABSA for literary-historical corpora 🎓
+# Testing text analysis methods for literary-historical corpora 🎓
 
 This repository hosts the work done in the framework of the [Computational Literary Studies Project (2020-2025)](https://clsinfra.io/). The CLS project is an infrastructure research projects which aims to create materials to support the digital humanities community by pointing them to the myriad of available tools and resources to collect, analyze and publish their literary-historical datasets. 
 
